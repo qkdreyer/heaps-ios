@@ -1,6 +1,4 @@
 .hxml
-bin/*
-!bin/.gitkeep
 build/*
 !build/.gitkeep
 src/*
