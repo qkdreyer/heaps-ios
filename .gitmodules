@@ -1,0 +1,18 @@
+[submodule "deps/SDL"]
+	path = deps/SDL
+	url = https://github.com/SDL-mirror/SDL
+[submodule "deps/IDZPrecompiledOgg"]
+	path = deps/IDZPrecompiledOgg
+	url = https://github.com/iosdevzone/IDZPrecompiledOgg.git
+[submodule "deps/IDZPrecompiledVorbis"]
+	path = deps/IDZPrecompiledVorbis
+	url = https://github.com/iosdevzone/IDZPrecompiledVorbis.git
+[submodule "deps/turbojpeg"]
+	path = deps/turbojpeg
+	url = https://github.com/hjeffrey/turbojpeg.git
+[submodule "deps/hashlink"]
+	path = deps/hashlink
+	url = https://github.com/HaxeFoundation/hashlink.git
+[submodule "deps/heaps"]
+	path = deps/heaps
+	url = https://github.com/HeapsIO/heaps.git
