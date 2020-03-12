@@ -8,11 +8,11 @@ echo 'World.hx\n-lib heaps\n-lib hlsdl\n-lib hxbit\n-main World\n-D windowSize=1
 ln -sf src/samples/world.hxml .hxml
 ./app-post-clone.sh
 ./app-patch.sh
-git update-index --assume-unchanged Config.xcconfig
+git update-index --assume-unchanged Configuration/Config.xcconfig
 ```
 
 # Configure
-Edit `Config.xcconfig`
+Edit `Configuration/Config.xcconfig`
 
 # Build
 ```sh
