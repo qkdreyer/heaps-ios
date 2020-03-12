@@ -11,7 +11,7 @@ echo 'Using haxelib version '`haxelib version`
 pushd hashlink
 
 echo 'Fetching Hashlink Dependencies'
-brew install libpng jpeg-turbo libvorbis sdl2 mbedtls openal-soft libuv
+brew bundle --no-lock
 
 echo 'Installing Hashlink'
 make all
