@@ -1,5 +1,7 @@
 Forked from https://github.com/thejustinwalsh/heaps-ios
 
+![ios](https://github.com/qkdreyer/heaps-ios/workflows/ios/badge.svg?branch=master)
+
 # Run
 `compile.hxml`
 ```
