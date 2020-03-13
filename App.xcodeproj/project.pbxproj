@@ -79,7 +79,6 @@
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		2C2D31AD23E7C2F700BCC355 /* res.pak in Resources */ = {isa = PBXBuildFile; fileRef = 2C2D31AC23E7C2F700BCC355 /* res.pak */; };
 		2C2D31B123E7C3F000BCC355 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D31B023E7C3F000BCC355 /* main.c */; };
-		2C2D31B323E7C45E00BCC355 /* hlc.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C2D31B223E7C45E00BCC355 /* hlc.json */; };
 		2C7A24A923F4BCB400692AFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A24A823F4BCB400692AFC /* Images.xcassets */; };
 		2CB4650A241A15D5002A2554 /* dxt.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CB46501241A15D5002A2554 /* dxt.c */; };
 		945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */; };
@@ -227,7 +226,6 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2C2D31AC23E7C2F700BCC355 /* res.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = res.pak; path = ../build/src/res.pak; sourceTree = "<group>"; };
 		2C2D31B023E7C3F000BCC355 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = build/src/main.c; sourceTree = SOURCE_ROOT; };
-		2C2D31B223E7C45E00BCC355 /* hlc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hlc.json; path = build/src/hlc.json; sourceTree = SOURCE_ROOT; };
 		2C7A24A823F4BCB400692AFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = App/Images.xcassets; sourceTree = "<group>"; };
 		2C84A5FB241995270015B07F /* Configuration/Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration/Config.xcconfig; sourceTree = "<group>"; };
 		2CB46501241A15D5002A2554 /* dxt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dxt.c; path = deps/hashlink/libs/fmt/dxt.c; sourceTree = SOURCE_ROOT; };
@@ -367,7 +365,6 @@
 			isa = PBXGroup;
 			children = (
 				2C2D31B023E7C3F000BCC355 /* main.c */,
-				2C2D31B223E7C45E00BCC355 /* hlc.json */,
 				2C2D31AC23E7C2F700BCC355 /* res.pak */,
 			);
 			path = src;
@@ -565,7 +562,6 @@
 				FD77A07F0E26BDA900F39101 /* Default.png in Resources */,
 				945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */,
 				2C7A24A923F4BCB400692AFC /* Images.xcassets in Resources */,
-				2C2D31B323E7C45E00BCC355 /* hlc.json in Resources */,
 				2C2D31AD23E7C2F700BCC355 /* res.pak in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +580,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "pushd $SRCROOT\nsh app-pre-build.sh\n";
+			shellScript = "./bin/build.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -712,9 +708,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited) $(TARGET_SYSTEM_HEADER_SEARCH_PATHS)";
-				WARNING_CFLAGS = (
-					"-Wno-shorten-64-to-32",
-				);
+				WARNING_CFLAGS = "-Wno-shorten-64-to-32";
 			};
 			name = Debug;
 		};
@@ -758,9 +752,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "$(inherited) $(TARGET_SYSTEM_HEADER_SEARCH_PATHS)";
-				WARNING_CFLAGS = (
-					"-Wno-shorten-64-to-32",
-				);
+				WARNING_CFLAGS = "-Wno-shorten-64-to-32";
 			};
 			name = Release;
 		};

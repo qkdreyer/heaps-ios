@@ -1,5 +1,2 @@
-.hxml
-build/*
-!build/.gitkeep
-src/*
-!src/.gitkeep
+build
+src

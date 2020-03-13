@@ -1,14 +1,22 @@
 Forked from https://github.com/thejustinwalsh/heaps-ios
 
 # Run
+`compile.hxml`
+```
+World.hx
+-lib heaps
+-lib hlsdl
+-lib hxbit
+-main World
+-D windowSize=1024x768
+-D resourcesPath=world_res
+-cp .
+```
+
 ```sh
 git clone https://github.com/qkdreyer/heaps-ios
-./app-clone.sh -f https://github.com/HeapsIO/heaps
-echo 'World.hx\n-lib heaps\n-lib hlsdl\n-lib hxbit\n-main World\n-D windowSize=1024x768\n-D resourcesPath=world_res\n-cp .' > ./src/samples/world.hxml
-ln -sf src/samples/world.hxml .hxml
-./app-post-clone.sh
-./app-patch.sh
-git update-index --assume-unchanged Configuration/Config.xcconfig
+ln -s deps/heaps/samples/ src
+./bin/bootstrap.sh src/compile.hxml
 ```
 
 # Configure
