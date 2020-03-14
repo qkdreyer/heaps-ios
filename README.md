@@ -1,6 +1,7 @@
 Forked from https://github.com/thejustinwalsh/heaps-ios
 
 ![ios](https://github.com/qkdreyer/heaps-ios/workflows/ios/badge.svg?branch=master)
+[![demo](https://asciinema.org/a/310075.svg)](https://asciinema.org/a/310075?autoplay=1)
 
 # Run
 `compile.hxml`
