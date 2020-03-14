@@ -1,5 +1,6 @@
 #include "Pathes.xcconfig"
 
+HXML=compile.hxml
 PRODUCT_NAME=HelloHeaps
 DEVELOPMENT_TEAM=C4L46ZPYY9
 PRODUCT_BUNDLE_IDENTIFIER=io.tcv.hello-heaps

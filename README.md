@@ -17,8 +17,9 @@ World.hx
 
 ```sh
 git clone https://github.com/qkdreyer/heaps-ios
+cd heaps-ios
 ln -s deps/heaps/samples/ src
-./bin/bootstrap.sh src/compile.hxml
+./bin/init.sh
 ```
 
 # Configure

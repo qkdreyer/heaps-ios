@@ -1,8 +1,11 @@
 #!/bin/sh
-OUT=build/src
+BUILD_DIR=$PWD/build/src
+IN=${1:-compile.hxml}
+OUT=${2:-main.c}
+PAK=${3:-pak.hl}
 
 cd src
-haxelib install compile.hxml --always || exit 1
-haxe -hl $OUT/main.c compile.hxml -lib hlsdl || exit 2
-haxe -L heaps -main hxd.fmt.pak.Build -hl $OUT/pak.hl || exit 3
-hl $OUT/pak.hl -out $OUT/res && rm $OUT/pak.hl || exit 4
+haxelib install --always $IN || exit 1
+haxe -hl $BUILD_DIR/$OUT -L heaps -L hlsdl $IN || exit 2
+haxe -hl $BUILD_DIR/$PAK -L heaps -main hxd.fmt.pak.Build || exit 3
+hl $BUILD_DIR/$PAK -out $BUILD_DIR/res || exit 4

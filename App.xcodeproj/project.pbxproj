@@ -77,6 +77,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		2C2014DF241C81AB0024F182 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2014DE241C81AA0024F182 /* CoreBluetooth.framework */; };
 		2C2D31AD23E7C2F700BCC355 /* res.pak in Resources */ = {isa = PBXBuildFile; fileRef = 2C2D31AC23E7C2F700BCC355 /* res.pak */; };
 		2C2D31B123E7C3F000BCC355 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D31B023E7C3F000BCC355 /* main.c */; };
 		2C7A24A923F4BCB400692AFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A24A823F4BCB400692AFC /* Images.xcassets */; };
@@ -224,6 +225,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2C2014DE241C81AA0024F182 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		2C2D31AC23E7C2F700BCC355 /* res.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = res.pak; path = ../build/src/res.pak; sourceTree = "<group>"; };
 		2C2D31B023E7C3F000BCC355 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = build/src/main.c; sourceTree = SOURCE_ROOT; };
 		2C7A24A823F4BCB400692AFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = App/Images.xcassets; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				00CC4BBC20A753CB0038CABB /* libturbojpeg.a in Frameworks */,
 				00CC4BBD20A753CB0038CABB /* libjpeg.a in Frameworks */,
 				00352B8620A1EDC500D31A9B /* Ogg.framework in Frameworks */,
+				2C2014DF241C81AB0024F182 /* CoreBluetooth.framework in Frameworks */,
 				00352B8820A1EDD000D31A9B /* Vorbis.framework in Frameworks */,
 				00352B8220A1E4A200D31A9B /* libsqlite3.tbd in Frameworks */,
 				00352B8020A1E3C600D31A9B /* libz.tbd in Frameworks */,
@@ -418,23 +421,24 @@
 			children = (
 				00CC4BBB20A753CB0038CABB /* libjpeg.a */,
 				00CC4BBA20A753CB0038CABB /* libturbojpeg.a */,
-				00352B8720A1EDD000D31A9B /* Vorbis.framework */,
-				00352B8520A1EDC500D31A9B /* Ogg.framework */,
 				00352B8120A1E4A200D31A9B /* libsqlite3.tbd */,
 				00352B7B20A1E3C600D31A9B /* libz.tbd */,
-				0038D8F9209FC09C007FA539 /* MetalKit.framework */,
-				0038D8F7209FC092007FA539 /* Metal.framework */,
-				00430AA6209F59EA00E647E4 /* AVFoundation.framework */,
-				00430AA4209F59D600E647E4 /* OpenAL.framework */,
-				FAE0E9641BAF967F0098DFA4 /* GameController.framework */,
-				FA8B4B96196703B400F8EB7C /* CoreMotion.framework */,
-				FDB8BFC50E5A0F6A00980157 /* CoreGraphics.framework */,
 				FD77A0840E26BDB800F39101 /* AudioToolbox.framework */,
+				00430AA6209F59EA00E647E4 /* AVFoundation.framework */,
 				FD779EDD0E26BA1200F39101 /* CoreAudio.framework */,
-				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
-				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				2C2014DE241C81AA0024F182 /* CoreBluetooth.framework */,
+				FDB8BFC50E5A0F6A00980157 /* CoreGraphics.framework */,
+				FA8B4B96196703B400F8EB7C /* CoreMotion.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				FAE0E9641BAF967F0098DFA4 /* GameController.framework */,
+				0038D8F7209FC092007FA539 /* Metal.framework */,
+				0038D8F9209FC09C007FA539 /* MetalKit.framework */,
+				00352B8520A1EDC500D31A9B /* Ogg.framework */,
+				00430AA4209F59D600E647E4 /* OpenAL.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				00352B8720A1EDD000D31A9B /* Vorbis.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -580,7 +584,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./bin/build.sh";
+			shellScript = "./bin/build.sh compile.hxml";
 		};
 /* End PBXShellScriptBuildPhase section */
 
