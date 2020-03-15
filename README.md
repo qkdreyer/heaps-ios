@@ -39,7 +39,7 @@ gem install xcpretty
         {
             "label": "Xcode",
             "type": "shell",
-            "command": "xcodebuild -project App.xcodeproj -target App build | xcpretty",
+            "command": "set -o pipefail && xcodebuild -project App.xcodeproj -target App build | xcpretty",
             "group": "build",
             "problemMatcher": []
         }

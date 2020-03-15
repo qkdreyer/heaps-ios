@@ -4,6 +4,7 @@ IN=${1:-compile.hxml}
 OUT=${2:-main.c}
 PAK=${3:-pak.hl}
 
+rm -rf $BUILD_DIR
 cd src
 haxelib install --always $IN || exit 1
 haxe -hl $BUILD_DIR/$OUT -L heaps -L hlsdl $IN || exit 2
