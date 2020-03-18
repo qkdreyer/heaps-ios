@@ -26,9 +26,9 @@ jobs:
       uses: einaregilsson/build-number@v2
       with:
         token: ${{ secrets.github_token }}
-    - run: echo ${{ secrets.COMPILE_HXML }} > src/compile.hxml
     - run: ln -s deps/heaps/samples/ src
-    - run: ./bin/boostrap.sh
+    - run: echo "${{ secrets.COMPILE_HXML }}" | tee /tmp/compile.hxml && mv /tmp/compile.hxml src
+    - run: ./bin/init.sh
     - run: xcodebuild -project App.xcodeproj -target App build
     - uses: Apple-Actions/upload-testflight-build@master
       with:
