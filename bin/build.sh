@@ -5,7 +5,7 @@ OUT=${2:-main.c}
 PAK=${3:-pak.hl}
 
 rm -rf $BUILD_DIR
-cd src
+cd $PWD/src
 haxelib install --always $IN || exit 1
 haxe -hl $BUILD_DIR/$OUT -L heaps -L hlsdl $IN || exit 2
 haxe -hl $BUILD_DIR/$PAK -L heaps -main hxd.fmt.pak.Build || exit 3
