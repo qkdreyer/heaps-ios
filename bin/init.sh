@@ -13,4 +13,3 @@ haxelib install hashlink
 haxelib install format
 
 echo '.gitignore\nbuild' > deps/SDL/.gitignore
-curl -s https://github.com/HaxeFoundation/hashlink/commit/41f0667e24b1e0991a8fb4d1bc00e8b602822e58.diff | git -C deps/hashlink apply
