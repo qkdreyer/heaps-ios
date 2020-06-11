@@ -58,7 +58,7 @@ make install
   {
       "label": "Run (iOS)",
       "type": "shell",
-      "command": "make run",
+      "command": "make install",
       "group": "build",
       "problemMatcher": []
     },
