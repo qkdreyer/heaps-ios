@@ -27,8 +27,7 @@ jobs:
       with:
         token: ${{ secrets.github_token }}
     - run: make init
-    - run: make out
-    - run: ln -s deps/heaps/samples/out out
+    - run: make heaps-world
     - run: make build
     - uses: Apple-Actions/upload-testflight-build@master
       with:
