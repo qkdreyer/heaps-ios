@@ -27,38 +27,41 @@ make install
 # Extra
 
 ## Visual Studio Code
+
 `.vscode/tasks.json`
-```json
+```
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Build (iOS)",
-            "type": "shell",
-            "command": "set -o pipefail && xcodebuild -project App.xcodeproj -target App build | xcpretty",
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
-            "label": "Run (iOS)",
-            "type": "shell",
-            "command": "ios-deploy -b build/Release-iphoneos/*.app -d",
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
-            "label": "Build & Run (iOS)",
-            "dependsOn": [
-                "Build (iOS)",
-                "Run (iOS)"
-            ],
-            "dependsOrder": "sequence",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        },
-    ]
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build & Run (iOS)",
+      "dependsOn": [
+        "Build (iOS)",
+        "Run (iOS)"
+      ],
+      "dependsOrder": "sequence",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build (iOS)",
+      "type": "shell",
+      "command": "make build",
+      "group": "build",
+      "problemMatcher": []
+  },
+  {
+      "label": "Run (iOS)",
+      "type": "shell",
+      "command": "make run",
+      "group": "build",
+      "problemMatcher": []
+    },
+]
 }
 ```
