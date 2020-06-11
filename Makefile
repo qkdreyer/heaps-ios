@@ -11,7 +11,7 @@ init:
 	haxelib setup /usr/local/lib/haxe/lib
 
 build:
-	set -o pipefail && xcodebuild -project App.xcodeproj -target App build | xcpretty
+	xcodebuild -project App.xcodeproj -target App build
 
 install:
 	ios-deploy -b build/Release-iphoneos/*.app -d
