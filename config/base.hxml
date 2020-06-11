@@ -2,5 +2,7 @@ World.hx
 -lib heaps
 -lib hlsdl
 -lib hxbit
+-lib format
+-lib hashlink
 -D windowSize=1024x768
 -D resourcesPath=world_res
