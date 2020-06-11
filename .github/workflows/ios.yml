@@ -26,13 +26,13 @@ jobs:
       uses: einaregilsson/build-number@v2
       with:
         token: ${{ secrets.github_token }}
-    - run: ln -s deps/heaps/samples/ src
-    - run: echo "${{ secrets.COMPILE_HXML }}" | tee /tmp/compile.hxml && mv /tmp/compile.hxml src
-    - run: ./bin/init.sh
-    - run: xcodebuild -project App.xcodeproj -target App build
+    - run: make init
+    - run: make out
+    - run: ln -s deps/heaps/samples/out out
+    - run: make build
     - uses: Apple-Actions/upload-testflight-build@master
       with:
-        app-path: .build/Artifacts/Example-iOS.ipa/Example-iOS.ipa
+        app-path: build/Release-iphoneos/*.ipa
         issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
         api-key-id: ${{ secrets.APPSTORE_KEY_ID }}
         api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}

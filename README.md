@@ -1,54 +1,28 @@
+# Heaps iOS
 Forked from https://github.com/thejustinwalsh/heaps-ios
 
 ![ios](https://github.com/qkdreyer/heaps-ios/workflows/ios/badge.svg?branch=master)
 [![demo](https://asciinema.org/a/310075.svg)](https://asciinema.org/a/310075?autoplay=1)
 
-# Init
-`compile.hxml`
-```
-World.hx
--lib heaps
--lib hlsdl
--lib hxbit
--main World
--D windowSize=1024x768
--D resourcesPath=world_res
--cp .
-```
+## Setup
 
 ```sh
 git clone https://github.com/qkdreyer/heaps-ios
 cd heaps-ios
-ln -s deps/heaps/samples/ src
-./bin/init.sh
+make init
 ```
 
-# Configure
-Edit `Configuration/Config.xcconfig`
+## Usage
 
-# Build
-
-## Setup
 ```sh
-gem install xcpretty
+make heaps-world
+make build
+make install
 ```
 
-## Exec
-```sh
-set -o pipefail && xcodebuild -project App.xcodeproj -target App build | xcpretty
-```
+## Configure
 
-# Deploy
-
-## Setup
-```sh
-npm install -g ios-deploy
-```
-
-## Exec
-```sh
-ios-deploy -b build/Release-iphoneos/*.app -d
-```
+- Edit `Configuration/Config.xcconfig`
 
 # Extra
 
