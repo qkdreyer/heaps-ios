@@ -3,7 +3,6 @@
 all: build install
 
 init:
-	git submodule update --remote --depth 1 --init --recursive
 	git update-index --assume-unchanged Configuration/Config.xcconfig
 	npm install -g ios-deploy
 	brew install haxe
