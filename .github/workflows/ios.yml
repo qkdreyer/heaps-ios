@@ -11,6 +11,8 @@ jobs:
     timeout-minutes: 30
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: true
     - uses: Apple-Actions/import-codesign-certs@v1
       with:
         p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
