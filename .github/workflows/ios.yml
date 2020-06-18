@@ -26,9 +26,14 @@ jobs:
     - run: make init
     - run: make heaps-world
     - run: make build
-    - uses: Apple-Actions/upload-testflight-build@master
+    - uses: actions/upload-artifact@v2
       with:
-        app-path: build/Release-iphoneos/*.ipa
-        issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
-        api-key-id: ${{ secrets.APPSTORE_KEY_ID }}
-        api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}
+        name: HelloHeaps.app
+        path: build/Release-iphoneos/HelloHeaps.app
+    # need app-store provisioning profile
+    # - uses: Apple-Actions/upload-testflight-build@master
+    #   with:
+    #     app-path: build/Release-iphoneos/*.ipa
+    #     issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+    #     api-key-id: ${{ secrets.APPSTORE_KEY_ID }}
+    #     api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}
