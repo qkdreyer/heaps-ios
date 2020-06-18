@@ -7,7 +7,6 @@ init:
 	npm install -g ios-deploy
 	brew install haxe
 	brew bundle install --file deps/hashlink/Brewfile --no-lock
-	curl https://patch-diff.githubusercontent.com/raw/HaxeFoundation/hashlink/pull/393.patch | git -C deps/hashlink apply
 	make -C deps/hashlink
 	make install -C deps/hashlink
 	haxelib setup /usr/local/lib/haxe/lib
