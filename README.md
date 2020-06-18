@@ -8,7 +8,7 @@ Forked from https://github.com/thejustinwalsh/heaps-ios
 ```sh
 git clone https://github.com/qkdreyer/heaps-ios
 cd heaps-ios
-make init
+PRODUCT_NAME=HeapsApp DEVELOPMENT_TEAM=1234567890 PRODUCT_BUNDLE_IDENTIFIER=io.heaps.app make init
 ```
 
 ## Usage
@@ -17,7 +17,3 @@ make init
 make heaps-world
 make # make build & make install
 ```
-
-## Configure
-
-- Edit `Configuration/Config.xcconfig`

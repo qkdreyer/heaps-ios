@@ -3,13 +3,16 @@
 all: build install
 
 init:
-	git update-index --assume-unchanged Configuration/Config.xcconfig
-	npm install -g ios-deploy
-	brew install haxe
+	brew install haxe gnu-sed
 	brew bundle install --file deps/hashlink/Brewfile --no-lock
 	make -C deps/hashlink
 	make install -C deps/hashlink
 	haxelib setup /usr/local/lib/haxe/lib
+	npm install -g ios-deploy
+	gsed -i "s/PRODUCT_NAME=.*/PRODUCT_NAME=$(PRODUCT_NAME)/" -i Configuration/Config.xcconfig
+	gsed -i "s/DEVELOPMENT_TEAM=.*/DEVELOPMENT_TEAM=$(DEVELOPMENT_TEAM)/" Configuration/Config.xcconfig
+	gsed -i "s/PRODUCT_BUNDLE_IDENTIFIER=.*/PRODUCT_BUNDLE_IDENTIFIER=$(PRODUCT_BUNDLE_IDENTIFIER)/" Configuration/Config.xcconfig
+	git update-index --assume-unchanged Configuration/Config.xcconfig
 
 build:
 	xcodebuild -project App.xcodeproj -target App build
