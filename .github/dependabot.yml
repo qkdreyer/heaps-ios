@@ -8,7 +8,6 @@ updates:
   open-pull-requests-limit: 10
   labels:
     - "dependencies"
-    # Add default Kodiak `merge.automerge_label`
     - "automerge"
 - package-ecosystem: gitsubmodule
   directory: "/"
@@ -18,5 +17,4 @@ updates:
   open-pull-requests-limit: 10
   labels:
     - "dependencies"
-    # Add default Kodiak `merge.automerge_label`
     - "automerge"
