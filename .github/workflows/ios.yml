@@ -25,7 +25,7 @@ jobs:
         api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}
     - run: PRODUCT_NAME=${{ secrets.APPSTORE_PRODUCT_NAME }} DEVELOPMENT_TEAM=${{ secrets.APPSTORE_DEVELOPMENT_TEAM }} PRODUCT_BUNDLE_IDENTIFIER=${{ secrets.APPSTORE_BUNDLE_ID }} make init
     - run: make heaps-world
-    - run: make build
+    - run: make
     - uses: actions/upload-artifact@v2
       with:
         name: ${{ secrets.APPSTORE_PRODUCT_NAME}}.app

@@ -1,6 +1,6 @@
 .PHONY: all init build install clean heaps-world
 
-all: build install
+all: build
 
 init:
 	brew install haxe gnu-sed ios-deploy
@@ -25,7 +25,7 @@ clean:
 heaps-world: heaps-world-hl heaps-world-pak
 
 heaps-world-hl:
-	cd deps/heaps/samples && haxelib install --always ../../../config/main.hxml && haxe -hl ../../../out/main.c ../../../config/main.hxml
+	cd deps/heaps/samples && haxelib install --always ../../../base.hxml && haxe -hl ../../../out/main.c ../../../base.hxml
 
 heaps-world-pak:
-	cd deps/heaps/samples && haxe -hl ../../../out/pak.hl ../../../config/pak.hxml && hl ../../../out/pak.hl -out ../../../out/res
+	cd deps/heaps/samples && haxe -hl hxd.fmt.pak.Build.hl -lib heaps -main hxd.fmt.pak.Build && hl hxd.fmt.pak.Build.hl -out ../../../out/res

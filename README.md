@@ -15,5 +15,6 @@ PRODUCT_NAME=HeapsApp DEVELOPMENT_TEAM=1234567890 PRODUCT_BUNDLE_IDENTIFIER=io.h
 
 ```sh
 make heaps-world
-make # make build & make install
+make # make build
+make install
 ```
