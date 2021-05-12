@@ -10,7 +10,7 @@ jobs:
     runs-on: macOS-latest
     timeout-minutes: 30
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
       with:
         submodules: true
     - uses: Apple-Actions/import-codesign-certs@v1
