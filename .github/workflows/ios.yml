@@ -26,7 +26,7 @@ jobs:
     - run: PRODUCT_NAME=${{ secrets.APPSTORE_PRODUCT_NAME }} DEVELOPMENT_TEAM=${{ secrets.APPSTORE_DEVELOPMENT_TEAM }} PRODUCT_BUNDLE_IDENTIFIER=${{ secrets.APPSTORE_BUNDLE_ID }} make init
     - run: make heaps-world
     - run: make
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: ${{ secrets.APPSTORE_PRODUCT_NAME}}.app
         path: build/Release-iphoneos/${{ secrets.APPSTORE_PRODUCT_NAME}}.app
